@@ -3,22 +3,17 @@ package org.sanmoh.Arrays;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * A generic, fixed-size array data structure.
- *
- * @param <T> the type of elements in this array
- */
-public class StaticArray<T> {
-  private final T[] array;
+/** A fixed-size array data structure. */
+public class StaticArray {
+  private final Integer[] array;
 
   /**
    * Constructs a StaticArray with the specified capacity.
    *
    * @param capacity the capacity of the array
    */
-  @SuppressWarnings("unchecked")
   public StaticArray(Integer capacity) {
-    array = (T[]) new Object[capacity];
+    array = new Integer[capacity];
   }
 
   /**
@@ -29,7 +24,7 @@ public class StaticArray<T> {
    * @param index the position at which the specified element is to be inserted
    * @throws IndexOutOfBoundsException if the index is out of bounds
    */
-  public void insert(T element, Integer index) {
+  public void insert(Integer element, Integer index) {
     if (isIndexValid(index)) array[index] = element;
     else throw new IndexOutOfBoundsException();
   }
@@ -41,7 +36,7 @@ public class StaticArray<T> {
    * @return the element at the specified position in this array
    * @throws IndexOutOfBoundsException if the index is out of bounds
    */
-  public T get(Integer index) {
+  public Integer get(Integer index) {
     if (isIndexValid(index)) return array[index];
     else throw new IndexOutOfBoundsException();
   }
@@ -51,7 +46,7 @@ public class StaticArray<T> {
    *
    * @return the underlying array of elements
    */
-  public T[] list() {
+  public Integer[] list() {
     return array;
   }
 
@@ -63,7 +58,7 @@ public class StaticArray<T> {
    * @param index the position at which the specified element is to be updated
    * @throws IndexOutOfBoundsException if the index is out of bounds
    */
-  public void update(T element, Integer index) {
+  public void update(Integer element, Integer index) {
     if (isIndexValid(index)) array[index] = element;
     else throw new IndexOutOfBoundsException();
   }
