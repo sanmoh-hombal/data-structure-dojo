@@ -5,7 +5,12 @@ import org.jetbrains.annotations.NotNull;
 
 /** A fixed-size array data structure. */
 public class StaticArray {
+  private static final int DEFAULT_CAPACITY = 10;
   private final Integer[] array;
+
+  public StaticArray() {
+    array = new Integer[DEFAULT_CAPACITY];
+  }
 
   /**
    * Constructs a StaticArray with the specified capacity.
