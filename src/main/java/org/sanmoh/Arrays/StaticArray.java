@@ -8,6 +8,9 @@ public class StaticArray {
   private static final int DEFAULT_CAPACITY = 10;
   private final Integer[] array;
 
+  /**
+   * Constructs a StaticArray with a default capacity. Initializes the array with a predefined size.
+   */
   public StaticArray() {
     array = new Integer[DEFAULT_CAPACITY];
   }
