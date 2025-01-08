@@ -105,6 +105,25 @@ public class DynamicArray<T> {
   }
 
   /**
+   * Prints the current state of the dynamic array to the console. This includes:
+   *
+   * <ul>
+   *   <li>The current size of the array.
+   *   <li>A list of all elements in the array, each printed on a new line, with an indented format.
+   * </ul>
+   *
+   * <p>This method is primarily intended for debugging or visualization purposes to inspect * the
+   * content and size of the array.
+   */
+  public void print() {
+    System.out.println("Size: \t" + size);
+    System.out.println("Array:");
+    for (int i = 0; i < size; i++) {
+      System.out.println("\t-" + data[i]);
+    }
+  }
+
+  /**
    * Resizes the internal storage array to double its current capacity. This method is called
    * internally when the current capacity is reached to accommodate the addition of more elements.
    *
